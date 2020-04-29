@@ -1,0 +1,207 @@
+.container {   
+    display: grid;
+    grid-template-rows: 70px auto 50px;
+    grid-template-columns: 300px 1fr;
+
+    min-height: 100vh;
+
+    font-family: Roboto;
+}
+
+.header {
+    grid-row: 1;
+    grid-column: span 2;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-left: 40px;
+    padding-right: 40px;
+
+    font-size: 24px;
+    background: #37ABFF;
+}
+
+.header__onlineSchool > a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.header__onlineSchool {
+    flex-grow: 1;
+}
+
+.header__icon {
+    margin-left: 30px;
+
+    width: 50px;
+    height: 50px;
+    background: #59B9FF;
+    border-radius: 25px;
+
+    cursor: pointer;
+}
+
+.aside {
+    grid-row: 2;
+    grid-column: 1;
+
+    display: flex;
+    flex-direction: column;
+     
+    font-size: 18px;
+
+    background: #EDEDED;
+}
+
+.aside > div:first-child { 
+    font-weight: bold;
+}
+
+.aside > div:nth-child(2) { /*Затычка для соответствия макету*/
+    background: #DCDCDC;
+}
+
+.aside__wrap > div {
+    padding-left: 40px;
+    display: table-cell;
+    vertical-align: middle;
+
+    height: 80px;
+}
+
+.aside__wrap:hover { 
+    /*Предположу по макету что выделение на ховере такого же цвета что и выбранный пункт*/
+    background: #DCDCDC;
+    cursor: pointer;
+}
+
+.content {
+    grid-row: 2;
+    grid-column: 2;
+
+    background: white;
+}
+
+.lessons { 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    padding-top: 30px;
+    padding-left: 40px;
+    /*justify-content: space-between;*/ /*Осознанно убираю, потому что некрасиво выглядит когда переносится на следующую строку например 2 карточки*/
+}
+
+.lesson {
+    display: flex;
+    flex-direction: column;
+
+    height: 340px;
+    width: 230px;
+
+    margin-bottom: 30px;
+    margin-right: 40px;
+    
+    background: #F3F3F3;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.14);
+}
+
+.lesson > div {
+    padding-left: 10px;
+    padding-right: 12px;
+}
+
+.lesson__name {
+    font-size: 16px;
+
+    margin-top: 12px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    color: #464646;
+}
+
+.lesson__date {
+    font-size: 10px;
+    margin-top: 7px;
+    color: #ABABAB;
+}
+
+.lesson__description {
+    font-size: 12px;
+    margin-top: 17px;
+
+    flex-grow: 1;
+
+    color: #464646;
+}
+
+.lesson__link {
+    height: 40px;
+    width: 230px;
+
+    font-size: 16px;
+    color: #464646;
+
+    background: #DCDCDC;
+    border-radius: 0px 0px 10px 10px;
+    border: 0;
+    outline: none; /*Чтобы не было прямоугольной рамки у непрямоугольной кнопки. Как сделать непрямоугольную рамку - не знаю*/
+    
+    cursor: pointer;
+}
+
+.seeMore {
+    width: 100%;
+    margin-bottom: 20px;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.seeMore > button {
+    width: 248px;
+    height: 55px;
+
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: #37ABFF;
+    border-radius: 8px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.footer {
+    grid-row: 3;
+    grid-column: span 2;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-left: 40px;
+    padding-right: 40px;
+
+    background: #3C3C3C;
+}
+
+.footer > div > a {
+    align-items: center;
+
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.footer__copyright::before {
+    content: "(c)";
+    color: #FFFFFF;
+}
